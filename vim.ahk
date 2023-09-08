@@ -39,3 +39,16 @@ Send, {Right}
 else
 Send, +{Right}
 return
+
+
+; fuck f10 replace =
+F10::=
+
+;===== mac keymapping
+!x::Send, ^x
+!a::Send, ^a
+!w::Send, ^w
+!f::Send, ^f
+!p::Send, ^p
+!c::Send, ^c
+!v::Send, ^v
