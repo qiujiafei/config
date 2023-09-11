@@ -1,0 +1,35 @@
+" ================================================================================================
+" = Basic settings =====================================
+" ================================================================================================
+set clipboard+=unnamed
+set ignorecase
+set scrolloff=10
+set history=200
+
+et number
+set relativenumber
+
+set incsearch
+set hlsearch
+set keep-english-in-normal
+set surround
+set easymotiom
+" ================================================================================================
+" = Leader Keymaps =====================================
+" ================================================================================================
+" leaderkey
+let mapleader=" "
+
+map <C-l> <action>(NextTab)
+map <C-h> <action>(PreviousTab)
+map <C-.> <action>(ShowIntentionActions)
+nmap f <action>(AceAction)
+map <C-p> <action>(GotoFile)
+map <C-S-p> <action>(SearchEverywhere)
+nmap gh <action>(ParameterInfo)
+map <A-;> <action>(ActivateTerminalToolWindow)
+nmap <leader>ss <action>(FileStructurePopup)
+nmap <leader>sb <action>(ShowBookmarks)
+nnoremap <c-o> :action Back<cr>
+
+nnoremap <c-i> :action Forward<cr>
