@@ -40,6 +40,8 @@ else
 Send, +{Right}
 return
 
+; 剪贴板
+^;::Send, #v
 
 ; fuck f10 replace =
 F10::=
