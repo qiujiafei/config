@@ -1,0 +1,83 @@
+[
+	{
+		"name": "server-beta",
+		"rootPath": "d:\\workspace\\fc\\server-beta",
+		"paths": [],
+		"tags": [
+			"Work"
+		],
+		"enabled": true
+	},
+	{
+		"name": "docs",
+		"rootPath": "d:\\workspace\\fc\\docs",
+		"paths": [],
+		"tags": [
+			"Work"
+		],
+		"enabled": true
+	},
+	{
+		"name": "test-client",
+		"rootPath": "d:\\workspace\\fc\\test_client\\client",
+		"paths": [],
+		"tags": [
+			"Work"
+		],
+		"enabled": true
+	},
+	{
+		"name": "server-pre",
+		"rootPath": "d:\\workspace\\fc\\server-pre",
+		"paths": [],
+		"tags": [
+			"Work"
+		],
+		"enabled": true
+	},
+	{
+		"name": "server-release",
+		"rootPath": "d:\\workspace\\fc\\server-release",
+		"paths": [],
+		"tags": [
+			"Work"
+		],
+		"enabled": true
+	},
+	{
+		"name": "cal-release",
+		"rootPath": "d:\\workspace\\fc\\release\\cal_center",
+		"paths": [],
+		"tags": [
+			"Work"
+		],
+		"enabled": true
+	},
+	{
+		"name": "server-trunk",
+		"rootPath": "d:\\workspace\\fc\\server-trunk",
+		"paths": [],
+		"tags": [
+			"Work"
+		],
+		"enabled": true
+	},
+	{
+		"name": "cal-beta",
+		"rootPath": "d:\\workspace\\fc\\cal-beta",
+		"paths": [],
+		"tags": [
+			"Work"
+		],
+		"enabled": true
+	},
+	{
+		"name": "go_common",
+		"rootPath": "d:\\workspace\\fc\\go_common",
+		"paths": [],
+		"tags": [
+			"Work"
+		],
+		"enabled": true
+	}
+]
