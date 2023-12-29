@@ -21,4 +21,4 @@ alias vim="nvim"
 alias lg="lazygit"
 
 
-. /usr/local/etc/profile.d/z.sh
+eval "$(zoxide init zsh --cmd cd)"
