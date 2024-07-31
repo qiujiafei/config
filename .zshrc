@@ -1,7 +1,7 @@
 function proxy()
 {
-  export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
-  https google.com
+  export https_proxy=http://192.168.9.132:7890 http_proxy=http://192.168.9.132:7890 all_proxy=socks5://192.168.9.132:7890
+  curl google.com
 }
 
 function proxyoff()
