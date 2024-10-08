@@ -5,8 +5,16 @@
   "vim.surround": true,
   "vim.easymotion": true,
   "vim.easymotionKeys": "asdghklqwertyuiopzxcvbnmfj",
+  "vim.smartRelativeLine": true,
   "vim.leader": "<space>",
   "vim.showMarksInGutter": true,
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.color": "#add9b5",
+  "vim.highlightedyank.duration": 550,
+  "vim.autoSwitchInputMethod.enable": true,
+  "vim.autoSwitchInputMethod.defaultIM": "1033",
+  "vim.autoSwitchInputMethod.obtainIMCmd": "D:\\im-select.exe",
+  "vim.autoSwitchInputMethod.switchIMCmd": "D:\\im-select.exe {im}",
   "vim.handleKeys": {
     "<C-a>": false,
     "<C-f>": false,
@@ -28,10 +36,40 @@
       "before": ["f"],
       "after": ["<leader>", "<leader>", "s"]
     },
+    // LSP START
+    {
+      "before": ["g", "p", "d"],
+      "commands": ["editor.action.peekDefinition"]
+    },
+    {
+      "before": ["g", "h"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
+    },
     {
       "before": ["g", "i"],
       "commands": ["editor.action.goToImplementation"]
     },
+    {
+      "before": ["g", "p", "i"],
+      "commands": ["editor.action.peekImplementation"]
+    },
+    {
+      "before": ["g", "q"],
+      "commands": ["editor.action.quickFix"]
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.referenceSearch.trigger"]
+    },
+    {
+      "before": ["g", "t"],
+      "commands": ["editor.action.goToTypeDefinition"]
+    },
+    {
+      "before": ["g", "p", "t"],
+      "commands": ["editor.action.peekTypeDefinition"]
+    },
+    // LSP END
     {
       // 打开git
       "before": ["<leader>", "g", "g"],
@@ -51,6 +89,12 @@
       "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
     },
     {
+      // 聚焦到问题
+      "before": ["<leader>", "c", "p"],
+      "commands": ["workbench.action.problems.focus"]
+      // "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    {
       // Rename
       "before": ["<leader>", "c", "r"],
       "commands": ["editor.action.rename"],
@@ -63,30 +107,34 @@
       "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
     },
     {
-      "before": ["K"],
-      "commands": ["editor.action.showHover"]
-    },
-    {
       // Next Error
       "before": ["]", "e"],
-      "commands": ["editor.action.marker.next"],
+      "commands": ["editor.action.marker.nextInFiles"],
       "when": "editorFocus"
     },
     {
       // Prev Error
       "before": ["[", "e"],
-      "commands": ["editor.action.marker.prev"],
+      "commands": ["editor.action.marker.prevInFiles"],
       "when": "editorFocus"
     },
     {
       // Prev buffer
       "before": ["J"],
-      "commands": [":bprev"]
+      "commands": ["workbench.action.previousEditor"]
     },
     {
       // Next buffer
       "before": ["K"],
-      "commands": [":bnext"]
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["<leader>", "m", "s"],
+      "commands": [":marks"]
+    },
+    {
+      "before": ["<leader>", "m", "d"],
+      "commands": [":delmarks a-zA-Z"]
     }
   ],
   "vim.operatorPendingModeKeyBindings": [
@@ -111,18 +159,6 @@
     {
       "before": ["f"],
       "after": ["<leader>", "<leader>", "s"]
-    }
-  ],
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": ["<space>", ";"],
-      "commands": ["vspacecode.space"]
-    }
-  ],
-  "vim.visualModeKeyBindingsNonRecursive": [
-    {
-      "before": ["<space>", ";"],
-      "commands": ["vspacecode.space"]
     }
   ],
   "[jsonc]": {
@@ -153,7 +189,9 @@
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "thiefBook.filePath": "C:\\Users\\25389\\Documents\\txt\\di9tequ\\3-di9tequ.txt",
   "thiefBook.currPageNumber": 204,
+  // "thiefBook.currPageNumber": 2538, //renleijianshi
   "go.toolsManagement.autoUpdate": true,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -182,9 +220,13 @@
   },
   "files.autoSave": "afterDelay",
   "cSpell.userWords": [
+    "aaagame",
     "actrfm",
     "datetime",
+    "golangci",
+    "gopls",
     "imitatetime",
+    "proto",
     "protobuf",
     "tailwindcss"
   ],
