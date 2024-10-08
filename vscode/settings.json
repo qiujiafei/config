@@ -1,0 +1,193 @@
+{
+  // vim
+  "vim.foldfix": true, // 折叠代码，按j不会把代码展开
+  "vim.useSystemClipboard": true,
+  "vim.surround": true,
+  "vim.easymotion": true,
+  "vim.easymotionKeys": "asdghklqwertyuiopzxcvbnmfj",
+  "vim.leader": "<space>",
+  "vim.showMarksInGutter": true,
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-p>": false,
+    "<C-w>": false,
+    "<C-c>": false,
+    "<C-v>": false
+  },
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["H"],
+      "after": ["^"]
+    },
+    {
+      "before": ["L"],
+      "after": ["g", "_"]
+    },
+    {
+      "before": ["f"],
+      "after": ["<leader>", "<leader>", "s"]
+    },
+    {
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"]
+    },
+    {
+      // 打开git
+      "before": ["<leader>", "g", "g"],
+      "commands": ["workbench.view.scm"],
+      "when": "workbench.scm.active"
+    },
+    {
+      // 打开Terminal
+      "before": ["<leader>", "f", "t"],
+      "commands": ["workbench.action.createTerminalEditor"],
+      "when": "terminal.active"
+    },
+    {
+      // Code Action
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.quickFix"],
+      "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+      // Rename
+      "before": ["<leader>", "c", "r"],
+      "commands": ["editor.action.rename"],
+      "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+      // Format Document
+      "before": ["<leader>", "c", "f"],
+      "commands": ["editor.action.formatDocument"],
+      "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showHover"]
+    },
+    {
+      // Next Error
+      "before": ["]", "e"],
+      "commands": ["editor.action.marker.next"],
+      "when": "editorFocus"
+    },
+    {
+      // Prev Error
+      "before": ["[", "e"],
+      "commands": ["editor.action.marker.prev"],
+      "when": "editorFocus"
+    },
+    {
+      // Prev buffer
+      "before": ["J"],
+      "commands": [":bprev"]
+    },
+    {
+      // Next buffer
+      "before": ["K"],
+      "commands": [":bnext"]
+    }
+  ],
+  "vim.operatorPendingModeKeyBindings": [
+    {
+      "before": ["H"],
+      "after": ["^"]
+    },
+    {
+      "before": ["L"],
+      "after": ["g", "_"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["H"],
+      "after": ["^"]
+    },
+    {
+      "before": ["L"],
+      "after": ["g", "_"]
+    },
+    {
+      "before": ["f"],
+      "after": ["<leader>", "<leader>", "s"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<space>", ";"],
+      "commands": ["vspacecode.space"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<space>", ";"],
+      "commands": ["vspacecode.space"]
+    }
+  ],
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[proto3]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "editor.formatOnSave": true,
+  "gopls": {
+    "ui.semanticTokens": true
+  },
+  "workbench.editor.highlightModifiedTabs": true,
+  "svn.sourceControl.ignore": ["bold.db", ".vscode"],
+  "go.lintTool": "golangci-lint",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.iconTheme": "vscode-icons",
+  "http.proxy": "socks5://192.168.9.9:7890",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vue.autoInsert.dotValue": true,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "thiefBook.currPageNumber": 204,
+  "go.toolsManagement.autoUpdate": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorTheme": "Gerry Dark",
+  "editor.fontSize": 16,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.fontFamily": "Cascadia Mono",
+  "security.workspace.trust.untrustedFiles": "open",
+  "git.autofetch": true,
+  "editor.smoothScrolling": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "workbench.list.smoothScrolling": true,
+  "terminal.integrated.smoothScrolling": true,
+  "editor.cursorBlinking": "solid",
+  "remote.SSH.remotePlatform": {
+    "123.60.53.172": "linux",
+    "192.168.88.128": "linux"
+  },
+  "github.copilot.editor.enableAutoCompletions": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.autoSave": "afterDelay",
+  "cSpell.userWords": [
+    "actrfm",
+    "datetime",
+    "imitatetime",
+    "protobuf",
+    "tailwindcss"
+  ],
+  "editor.bracketPairColorization.enabled": false,
+  "window.title": "${dirty}${rootName}${separator}${activeEditorShort}"
+}
